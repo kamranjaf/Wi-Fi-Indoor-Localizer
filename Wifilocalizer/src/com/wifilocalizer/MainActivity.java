@@ -583,7 +583,7 @@ public class MainActivity extends Activity{
 	  
 	  /* Algorithms */
 	  params_sim[0]=(float)Integer.valueOf(mySharedPreferences.getString("wifi_localization_algorithm", "1"));
-	  params_sim[1]=(float)Integer.valueOf(mySharedPreferences.getString("tracking_algorithm", "1"));
+	  params_sim[1]=1;
 	  
 
 	  /* Startup */

@@ -11,14 +11,4 @@
     </string-array>
     
     
-   <string-array name="tracking_algorithms">
-        <item name="NTW">No Tracking (Wi-Fi Only)</item>
-        <item name="kalman">Kalman Filter</item>
-    </string-array>
-    
-    <string-array name="tracking_algorithms_Values">
-        <item name="NTW">1</item>
-        <item name="kalman">2</item>
-    </string-array>
-    
 </resources>
