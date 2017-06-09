@@ -9,8 +9,6 @@ package com.wifilocalizer;
 
 public final class R {
     public static final class array {
-        public static final int tracking_algorithms=0x7f080002;
-        public static final int tracking_algorithms_Values=0x7f080003;
         public static final int wifi_localization_algorithms=0x7f080000;
         public static final int wifi_localization_algorithms_Values=0x7f080001;
     }

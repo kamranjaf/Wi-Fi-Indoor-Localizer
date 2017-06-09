@@ -15,6 +15,8 @@ import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.GroundOverlay;
 import com.google.android.gms.maps.model.GroundOverlayOptions;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 import android.net.wifi.ScanResult;
 import android.net.wifi.WifiManager;
@@ -466,6 +468,12 @@ public class MainActivity extends Activity{
   		        .position(new LatLng(43.659652988335878, -79.397276867154886), 100f, 121f).bearing(-17.89f));
 
   		
+  		final LatLng PERTH = new LatLng(43.659652988335878, -79.397276867154886);
+  		Marker perth = googleMap.addMarker(new MarkerOptions()
+  		                          .position(PERTH)
+  		                          .draggable(true)
+  		                          .title("Bahen"));
+  		
   		  mylocation=new CurrentLocationProvider(this);
   		  googleMap.setLocationSource(mylocation);
 
@@ -604,7 +612,6 @@ public class MainActivity extends Activity{
 			List<ScanResult> results = wifiManager.getScanResults();
 			
 			if (results != null){
-
 			
 			for (counter_wifi=0;counter_wifi<MAX_WIFI_APs;counter_wifi++){
 				wifi_rss_buff[counter_wifi]=-200;
@@ -616,7 +623,9 @@ public class MainActivity extends Activity{
 		    	
 		    	String name = result.BSSID;
 				int level = result.level;
-				
+				/*Log.d("Frequency",Integer.toString(result.frequency));
+				Log.d("SSID",result.SSID);
+				Log.d("Capabilities",result.capabilities);*/
 				wifi_rss_buff[counter_wifi]=level;
 				wifi_mac_buff[counter_wifi]=name;
 				counter_wifi++;

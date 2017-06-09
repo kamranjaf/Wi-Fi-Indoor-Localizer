@@ -1,5 +1,3 @@
-int array tracking_algorithms 0x7f080002
-int array tracking_algorithms_Values 0x7f080003
 int array wifi_localization_algorithms 0x7f080000
 int array wifi_localization_algorithms_Values 0x7f080001
 int attr adSize 0x7f010000
